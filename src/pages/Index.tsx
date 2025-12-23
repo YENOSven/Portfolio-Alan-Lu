@@ -1,4 +1,4 @@
-import { MapPin, GraduationCap, Calendar, BookOpen, Download, Sparkles } from "lucide-react";
+import { MapPin, GraduationCap, Calendar, BookOpen, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -60,12 +60,6 @@ const Index = () => {
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-6">
               {profile.summary}
             </p>
-            <Button variant="default" size="lg" className="gap-2 bg-primary/60 hover:bg-primary/70" asChild>
-              <a href="/Alan_Lu_Resume.pdf" download="Alan_Lu_Resume.pdf">
-                <Download className="h-5 w-5" />
-                Download Resume
-              </a>
-            </Button>
           </section>
 
           {/* Projects Section */}

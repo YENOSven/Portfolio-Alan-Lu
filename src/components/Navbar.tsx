@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Linkedin, Github, Mail, Download } from "lucide-react";
+import { Menu, X, Linkedin, Github, Mail } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -50,7 +50,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Right: Social Icons + Resume + Theme Toggle */}
+          {/* Right: Social Icons + Theme Toggle */}
           <div className="flex items-center gap-2">
             <div className="hidden sm:flex items-center gap-1">
               <Button
@@ -97,21 +97,6 @@ export function Navbar() {
                 </a>
               </Button>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex gap-2"
-              asChild
-            >
-              <a
-                href="/Alan_Lu_Resume.pdf"
-                download="Alan_Lu_Resume.pdf"
-                aria-label="Download Resume"
-              >
-                <Download className="h-4 w-4" />
-                Resume
-              </a>
-            </Button>
             <ThemeToggle />
             
             {/* Mobile menu button */}
@@ -157,12 +142,6 @@ export function Navbar() {
                   </a>
                 </Button>
               </div>
-              <Button variant="outline" size="sm" className="w-full mt-2 gap-2" asChild>
-                <a href="/Alan_Lu_Resume.pdf" download="Alan_Lu_Resume.pdf" aria-label="Download Resume">
-                  <Download className="h-4 w-4" />
-                  Download Resume
-                </a>
-              </Button>
             </div>
           </div>
         )}
