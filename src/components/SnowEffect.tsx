@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "@/hooks/use-theme";
 
 interface Snowflake {
   x: number;
@@ -14,6 +15,7 @@ export function SnowEffect() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const snowflakesRef = useRef<Snowflake[]>([]);
   const animationRef = useRef<number>();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -54,6 +56,13 @@ export function SnowEffect() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      // Determine snow color based on theme
+      // Check for dark mode via class on html element for more reliable detection
+      const isDark = document.documentElement.classList.contains("dark");
+      
+      // Dark blue for light mode, white for dark mode
+      const snowColor = isDark ? "255, 255, 255" : "30, 58, 138"; // white or dark blue (blue-900)
+
       snowflakesRef.current.forEach((flake) => {
         // 3D effect: size and speed based on z-depth
         const perspective = 0.5 + flake.z * 0.5;
@@ -76,14 +85,14 @@ export function SnowEffect() {
         const opacity = flake.opacity * perspective;
         ctx.beginPath();
         ctx.arc(flake.x, flake.y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+        ctx.fillStyle = `rgba(${snowColor}, ${opacity})`;
         ctx.fill();
 
         // Add subtle glow for closer snowflakes
         if (flake.z > 0.7) {
           ctx.beginPath();
           ctx.arc(flake.x, flake.y, size * 2, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.2})`;
+          ctx.fillStyle = `rgba(${snowColor}, ${opacity * 0.2})`;
           ctx.fill();
         }
       });
@@ -99,7 +108,7 @@ export function SnowEffect() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas

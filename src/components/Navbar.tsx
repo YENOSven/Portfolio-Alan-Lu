@@ -50,7 +50,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Right: Social Icons + Theme Toggle */}
+          {/* Right: Social Icons + Resume + Theme Toggle */}
           <div className="flex items-center gap-2">
             <div className="hidden sm:flex items-center gap-1">
               <Button

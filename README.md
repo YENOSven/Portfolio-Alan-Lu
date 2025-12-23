@@ -1,41 +1,73 @@
-# Portfolio
+# Welcome to your Lovable project
 
-A single-page portfolio for Alan Lu built with Vite, React, TypeScript, and Tailwind. It highlights projects, experience, and skills with smooth in-page navigation, a light/dark theme toggle, and a subtle 3D snow overlay for seasonal flair.
+## Project info
 
-## Features
-- Hero with quick facts, citizenship, and a resume download button.
-- Project grid with timelines and optional GitHub links.
-- Vertical experience timeline with role-level bullets and tech stack callouts.
-- Skill categories rendered as badge groups.
-- Light/dark theme toggle with preference saved to local storage.
-- Mobile-friendly navbar with smooth scrolling to each section.
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-## Tech Stack
-- React 18 + TypeScript + Vite
-- Tailwind CSS with shadcn/ui components and Radix primitives
-- React Router for in-page routes; TanStack Query provider is wired for future data needs
-- lucide-react icons and custom canvas-based snow effect
+## How can I edit this code?
 
-## Getting Started
-Prerequisites: Node 18+ and npm.
+There are several ways of editing your application.
 
-```bash
-npm install
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-Other scripts:
-- `npm run build` – production build to `dist/`
-- `npm run build:dev` – development-mode build
-- `npm run preview` – preview the production build locally
-- `npm run lint` – run ESLint
+**Edit a file directly in GitHub**
 
-## Project Structure
-- `src/pages/Index.tsx` – main page layout assembling all sections
-- `src/data/` – portfolio content: `profile.ts`, `projects.ts`, `experience.ts`, `skills.ts`
-- `src/components/` – UI building blocks (navbar, project cards, timeline, skill tags, snow effect, theme toggle)
-- `src/assets/alan.png` – profile image used in the hero and navbar
-- `public/` – static assets; add `Alan_Lu_Resume.pdf` here for the resume download link
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## Content Updates
-Edit the TypeScript files in `src/data/` to update text content. Replace `src/assets/alan.png` (and add `public/Alan_Lu_Resume.pdf`) to change the photo and resume download. Styling tweaks can be made via `src/index.css` or by adjusting Tailwind classes in the components.
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
