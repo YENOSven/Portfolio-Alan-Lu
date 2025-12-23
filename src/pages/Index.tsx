@@ -54,14 +54,6 @@ const Index = () => {
                       {fact.label}
                     </Badge>
                   ))}
-                  <Badge
-                    variant="outline"
-                    className="gap-1.5 text-xs"
-                    title="Generated with AI assistance"
-                  >
-                    <Sparkles className="h-3 w-3" />
-                    AI-assisted build
-                  </Badge>
                 </div>
               </div>
             </div>
